@@ -99,5 +99,3 @@ WindowLocation          = require "Libraries.WindowLocation"
 XmlDoc                  = require "Libraries.XmlDoc"
 
 require "Globals"
-
-print(String_GetWeaselString(Apollo.GetString("TargetFrame_ShortNumberWhole"), 5))

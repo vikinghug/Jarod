@@ -1,7 +1,7 @@
 require "Jarod"
 
-describe('Get_WeaselString Functionality Testing', function()
+describe('String_GetWeaselString Functionality Testing', function()
   it ('tests TargetFrame_ShortNumberWhole', function()
-    assert.is_equal(Get_WeaselString(Apollo.GetString("TargetFrame_ShortNumberWhole"),5),"5k")
+    assert.is_equal(String_GetWeaselString(Apollo.GetString("TargetFrame_ShortNumberWhole"),5),"5k")
   end)
 end)
