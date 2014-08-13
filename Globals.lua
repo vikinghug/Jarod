@@ -11,6 +11,6 @@ function String_GetWeaselString(strWeasel, ...)
   -- Special Case: $xf# where # is precision of float translates to: %0.#f
   local fmtStr = string.gsub(strWeasel, "\$%df(%d+)", function(a) return "%0." .. (tostring(a) or 0) .."f" end)
   -- Check against conversion map for the rest of them
-  fmtStr = string.gsub(strWeasel, "\$%d(%a)", function(a) return "%".. ConvertMap[a] or a end)
+  fmtStr = string.gsub(fmtStr, "\$%d(%a)", function(a) return "%".. ConvertMap[a] or a end)
   return string.format(fmtStr, ...)
 end
