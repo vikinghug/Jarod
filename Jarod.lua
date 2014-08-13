@@ -1,25 +1,103 @@
+--GLOBALS: AaRect, AbilityBook, AccountItemLib, Achievement, AchievementsLib, ActionSetLib, Apollo, ApolloColor, ApolloCursor, ApolloTimer
+--GLOBALS: AttributeMilestonesLib, CColor, CREDDExchangeLib, CREDDExchangeOrder, CSIsLib, Challenges, ChallengesLib, CharacterScreenLib
+--GLOBALS: CharacterTitle, ChatChannelLib, ChatSystemLib, CombatFloater, CombatFloaters, CommodityOrder, CommunicatorLib, CooldownWindow
+--GLOBALS: CostumeWindow, CraftingLib, CustomerSurveyLib, CustomerSurveyTypeLib, DatacubeLib, DemoSummary, DialogResponse, DialogSys
+--GLOBALS: Episode, EulerAngles, FriendshipLib, GalacticArchiveArticle, GalacticArchiveEntry, GameLib, GroupLib, GuildLib, GuildTypeLib
+--GLOBALS: HazardsLib, HexGroups, HousingLib, ICCommLib, Item, ItemAuction, MacrosLib, MailSystemLib, MarketplaceLib, MatchingGame, Menu
+--GLOBALS: MessageManagerLib, Money, P2PTrading, PathEpisode, PathMission, PetCustomization, PetCustomizationLib, PetFlair, PlayerPathLib
+--GLOBALS: PreGameLib, PublicEvent, PublicEventObjective, PublicEventsLib, Quaternion, Quest, QuestCategory, QuestLib, RealmSelectScreenLib
+--GLOBALS: ScientistScanBotProfile, SettlerImprovement, SoldierEvent, SoldierImprovement, Sound, Spell, StorefrontLib, Talent, TalentPool
+--GLOBALS: Time, Tooltip, Unit, Vector2, Vector3, WindowLocation, XmlDoc
 
-Apollo = {}
+AaRect                  = require "Libraries.AaRect"
+AbilityBook             = require "Libraries.AbilityBook"
+AccountItemLib          = require "Libraries.AccountItemLib"
+Achievement             = require "Libraries.Achievement"
+AchievementsLib         = require "Libraries.AchievementsLib"
+ActionSetLib            = require "Libraries.ActionSetLib"
+Apollo                  = require "Libraries.Apollo"
+ApolloColor             = require "Libraries.ApolloColor"
+ApolloCursor            = require "Libraries.ApolloCursor"
+ApolloTimer             = require "Libraries.ApolloTimer"
+AttributeMilestonesLib  = require "Libraries.AttributeMilestonesLib"
+CColor                  = require "Libraries.CColor"
+CREDDExchangeLib        = require "Libraries.CREDDExchangeLib"
+CREDDExchangeOrder      = require "Libraries.CREDDExchangeOrder"
+CSIsLib                 = require "Libraries.CSIsLib"
+Challenges              = require "Libraries.Challenges"
+ChallengesLib           = require "Libraries.ChallengesLib"
+CharacterScreenLib      = require "Libraries.CharacterScreenLib"
+CharacterTitle          = require "Libraries.CharacterTitle"
+ChatChannelLib          = require "Libraries.ChatChannelLib"
+ChatSystemLib           = require "Libraries.ChatSystemLib"
+CombatFloater           = require "Libraries.CombatFloater"
+CombatFloaters          = require "Libraries.CombatFloaters"
+CommodityOrder          = require "Libraries.CommodityOrder"
+CommunicatorLib         = require "Libraries.CommunicatorLib"
+CooldownWindow          = require "Libraries.CooldownWindow"
+CostumeWindow           = require "Libraries.CostumeWindow"
+CraftingLib             = require "Libraries.CraftingLib"
+CustomerSurveyLib       = require "Libraries.CustomerSurveyLib"
+CustomerSurveyTypeLib   = require "Libraries.CustomerSurveyTypeLib"
+DatacubeLib             = require "Libraries.DatacubeLib"
+DemoSummary             = require "Libraries.DemoSummary"
+DialogResponse          = require "Libraries.DialogResponse"
+DialogSys               = require "Libraries.DialogSys"
+Episode                 = require "Libraries.Episode"
+EulerAngles             = require "Libraries.EulerAngles"
+FriendshipLib           = require "Libraries.FriendshipLib"
+GalacticArchiveArticle  = require "Libraries.GalacticArchiveArticle"
+GalacticArchiveEntry    = require "Libraries.GalacticArchiveEntry"
+GameLib                 = require "Libraries.GameLib"
+GroupLib                = require "Libraries.GroupLib"
+GuildLib                = require "Libraries.GuildLib"
+GuildTypeLib            = require "Libraries.GuildTypeLib"
+HazardsLib              = require "Libraries.HazardsLib"
+HexGroups               = require "Libraries.HexGroups"
+HousingLib              = require "Libraries.HousingLib"
+ICCommLib               = require "Libraries.ICCommLib"
+Item                    = require "Libraries.Item"
+ItemAuction             = require "Libraries.ItemAuction"
+MacrosLib               = require "Libraries.MacrosLib"
+MailSystemLib           = require "Libraries.MailSystemLib"
+MarketplaceLib          = require "Libraries.MarketplaceLib"
+MatchingGame            = require "Libraries.MatchingGame"
+Menu                    = require "Libraries.Menu"
+MessageManagerLib       = require "Libraries.MessageManagerLib"
+Money                   = require "Libraries.Money"
+P2PTrading              = require "Libraries.P2PTrading"
+PathEpisode             = require "Libraries.PathEpisode"
+PathMission             = require "Libraries.PathMission"
+PetCustomization        = require "Libraries.PetCustomization"
+PetCustomizationLib     = require "Libraries.PetCustomizationLib"
+PetFlair                = require "Libraries.PetFlair"
+PlayerPathLib           = require "Libraries.PlayerPathLib"
+PreGameLib              = require "Libraries.PreGameLib"
+PublicEvent             = require "Libraries.PublicEvent"
+PublicEventObjective    = require "Libraries.PublicEventObjective"
+PublicEventsLib         = require "Libraries.PublicEventsLib"
+Quaternion              = require "Libraries.Quaternion"
+Quest                   = require "Libraries.Quest"
+QuestCategory           = require "Libraries.QuestCategory"
+QuestLib                = require "Libraries.QuestLib"
+RealmSelectScreenLib    = require "Libraries.RealmSelectScreenLib"
+ScientistScanBotProfile = require "Libraries.ScientistScanBotProfile"
+SettlerImprovement      = require "Libraries.SettlerImprovement"
+SoldierEvent            = require "Libraries.SoldierEvent"
+SoldierImprovement      = require "Libraries.SoldierImprovement"
+Sound                   = require "Libraries.Sound"
+Spell                   = require "Libraries.Spell"
+StorefrontLib           = require "Libraries.StorefrontLib"
+Talent                  = require "Libraries.Talent"
+TalentPool              = require "Libraries.TalentPool"
+Time                    = require "Libraries.Time"
+Tooltip                 = require "Libraries.Tooltip"
+Unit                    = require "Libraries.Unit"
+Vector2                 = require "Libraries.Vector2"
+Vector3                 = require "Libraries.Vector3"
+WindowLocation          = require "Libraries.WindowLocation"
+XmlDoc                  = require "Libraries.XmlDoc"
 
-APOLLO_STRINGS = {
-  ['TargetFrame_ShortNumberWhole'] = '$1ck',
-  ['TargetFrame_ShortNumberFloat'] = '$1f1k',
-  ['TargetFrame_MillionsNumberWhole'] = '$1cm',
-  ['TargetFrame_MillionsNumberFloat'] = '$1f1m',
-  ['TargetFrame_BillionsNumberWhole'] = '$1cb',
-  ['TargetFrame_BillionsNumberFloat'] = '$1f1b',
-}
+require "Globals"
 
-function Apollo.GetString(str)
-  return APOLLO_STRINGS[str]
-end
-
-local ConvertMap = {
-  ["c"] = "d",
-  ["n"] = "s",
-}
-
-function String_GetWeaselString(strWeasel, ...)
-  local fmtStr = string.gsub(strWeasel, "\$%d(%a)", function(a) return "%".. ConvertMap[a] end)
-  return string.format(fmtStr, ...)
-end
+print(String_GetWeaselString(Apollo.GetString("TargetFrame_ShortNumberWhole"), 5))

@@ -1,0 +1,23 @@
+language: c
+
+env:
+  - LUA='Lua 5.1'
+
+branches:
+  only:
+    - master
+
+before_install:
+  - bash .travis_setup.sh
+
+install:
+  - sudo apt-get update -qq
+  - sudo luarocks install busted
+  - sudo luarocks make
+
+script: "busted spec"
+
+#notifications:
+#  webhooks:
+#  on_success: change
+#  on_failure: always
