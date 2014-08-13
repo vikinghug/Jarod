@@ -13,7 +13,7 @@ before_install:
 install:
   - sudo apt-get update -qq
   - sudo luarocks install busted
-  #- sudo luarocks make --local jarod.rockspec
+  - sudo luarocks make --local jarod-0.1-1.rockspec
 
 script: "busted spec"
 
