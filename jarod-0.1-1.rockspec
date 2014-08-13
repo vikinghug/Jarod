@@ -1,4 +1,4 @@
--- jarod-0.7-1.rockspec
+-- jarod-0.1-1.rockspec
 package = "jarod"
 version = "0.1-1"
 source = {
