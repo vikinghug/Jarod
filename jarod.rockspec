@@ -1,6 +1,6 @@
 -- jarod.rockspec
 package = "jarod"
-version = "0.0.1"
+version = "0.1-1"
 source = {
    url = "https://github.com/vikinghug/Jarod"
 }
@@ -17,5 +17,10 @@ dependencies = {
 }
 
 build = {
-   type = "builtin"
+  type = "none",
+  install = {
+    bin = {
+      "rockspec"
+    }
+  }
 }
