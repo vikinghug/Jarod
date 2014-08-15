@@ -159,7 +159,7 @@ end
 function Apollo.GetAPIVersion()
 end
 function Apollo.GetPackage(name)
-  return { __RegisteredPackages[name] }
+  return __RegisteredPackages[name]
 end
 function Apollo.GetStrata()
 end
