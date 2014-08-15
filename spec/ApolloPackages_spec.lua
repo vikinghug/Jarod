@@ -11,13 +11,15 @@ describe('ApolloPackage Functionality Testing', function()
   end)
 
   it ('returns the Package', function()
-    local retPkg = Apollo.GetPackage(MAJOR)
+    local retAPkg = Apollo.GetPackage(MAJOR)
+    local retPkg = retAPkg and retAPkg.tPackage or nil
     assert.are.equal(retPkg, PackageOne)
   end)
 
   it ('only accepts the highst minor version', function()
     Apollo.RegisterPackage(PackageTwo, MAJOR, MINOR_TWO, {})
-    local retPkg = Apollo.GetPackage(MAJOR)
+    local retAPkg = Apollo.GetPackage(MAJOR)
+    local retPkg = retAPkg and retAPkg.tPackage or nil
     assert.are.equal(retPkg, PackageOne)
   end)
 end)
