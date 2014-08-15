@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local EulerAngles = { }
 EulerAngles.__index = EulerAngles
@@ -8,10 +8,12 @@ end
 function EulerAngles:ToQuaternion()
 end
 function EulerAngles.New()
-    local self = setmetatable({}, EulerAngles)
-    return self
+  local self = setmetatable({}, EulerAngles)
+  return self
 end
-function EulerAngles.Is()
+function EulerAngles.Is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == EulerAngles or false
 end
 function EulerAngles.FromMatrix()
 end

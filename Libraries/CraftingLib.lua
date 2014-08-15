@@ -75,29 +75,29 @@ end
 function CraftingLib.GetTierForAchievementCategory()
 end
 CraftingLib.CodeEnumTradeskill = {
-    Weaponsmith = 1,
-    Cooking = 2,
-    Armorer = 3,
-    Mining = 4,
-    Outfitter = 5,
-    Survivalist = 6,
-    Augmentor = 7,
-    Architect = 8,
-    Relic_Hunter = 9,
-    Fishing = 10,
-    Farmer = 11,
-    Tailor = 12,
-    Runecrafting = 1
+  Weaponsmith = 1,
+  Cooking = 2,
+  Armorer = 3,
+  Mining = 4,
+  Outfitter = 5,
+  Survivalist = 6,
+  Augmentor = 7,
+  Architect = 8,
+  Relic_Hunter = 9,
+  Fishing = 10,
+  Farmer = 11,
+  Tailor = 12,
+  Runecrafting = 1
 }
 CraftingLib.CodeEnumTradeskillTier = {
-    Novice = 1,
-    Apprentice = 2,
-    Journeyman = 3,
-    Expert = 4,
-    Artisan = 5,
-    Zero = 1,
-    Master = 2,
-    GrandMaster = 3
+  Novice = 1,
+  Apprentice = 2,
+  Journeyman = 3,
+  Expert = 4,
+  Artisan = 5,
+  Zero = 1,
+  Master = 2,
+  GrandMaster = 3
 }
 function CraftingLib.GetSchematicCraftableCount()
 end
@@ -152,35 +152,35 @@ end
 function CraftingLib.GetEngravingInfo()
 end
 CraftingLib.CodeEnumCraftingDiscoveryHotCold = {
-    Cold = 1,
-    Warm = 2,
-    Hot = 3,
-    Success = 4
+  Cold = 1,
+  Warm = 2,
+  Hot = 3,
+  Success = 4
 }
 CraftingLib.CodeEnumTradeskillResult = {
-    Success = 1,
-    InsufficentFund = 2,
-    InvalidItem = 3,
-    InvalidSlot = 4,
-    MissingEngravingStation = 5,
-    Unlocked = 6,
-    UnknownError = 7,
-    GlyphExists = 8,
-    MissingGlyph = 9,
-    DuplicateGlyph = 10,
-    AttemptFailed = 11,
-    GlyphSlotLimit = 12
+  Success = 1,
+  InsufficentFund = 2,
+  InvalidItem = 3,
+  InvalidSlot = 4,
+  MissingEngravingStation = 5,
+  Unlocked = 6,
+  UnknownError = 7,
+  GlyphExists = 8,
+  MissingGlyph = 9,
+  DuplicateGlyph = 10,
+  AttemptFailed = 11,
+  GlyphSlotLimit = 12
 }
 CraftingLib.CodeEnumCraftingDirection = {
-    None = 1,
-    N = 2,
-    NE = 3,
-    E = 4,
-    SE = 5,
-    S = 6,
-    SW = 7,
-    W = 8,
-    NW = 9
+  None = 1,
+  N = 2,
+  NE = 3,
+  E = 4,
+  SE = 5,
+  S = 6,
+  SW = 7,
+  W = 8,
+  NW = 9
 }
 
 return CraftingLib

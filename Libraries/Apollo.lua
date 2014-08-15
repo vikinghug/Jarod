@@ -2,10 +2,11 @@ local setmetatable = setmetatable
 local Button = require "Elements.Button"
 local Window = require "Elements.Window"
 
-local APOLLO_STRINGS = require "Strings.Apollo"
+local __APOLLO_STRINGS = require "Strings.Apollo"
+
+local __RegisteredPackages = setmetatable({}, { __index = function(k,t) k[t] = {} return k[t] end })
 
 local Apollo = {
-    __RegisteredPackages = {}
 }
 
 function Apollo.StartTimer(strTimerName)
@@ -47,7 +48,7 @@ end
 function Apollo.AssetFileTimeString(strFilename)
 end
 function Apollo.GetString(strCheck)
-    return APOLLO_STRINGS[strCheck] or strCheck
+  return __APOLLO_STRINGS[strCheck] or strCheck
 end
 function Apollo.GetScreenSize()
 end
@@ -64,17 +65,17 @@ end
 function Apollo.IsAltKeyDown()
 end
 function Apollo.GetAssetFolder()
-    return '.'
+  return '.'
 end
 function Apollo.SetCursor(pCursor)
 end
 function Apollo.GetTickCount()
 end
 function Apollo.RegisterAddon(nLuaEventHandler, bConfig, strConfigName, tDependencies)
-    Apollo.__AddonRef = nLuaEventHandler
-    -- Determine Addon name ... somehow
-    -- Apollo.__AddonName =
-    nLuaEventHandler:OnLoad()
+  Apollo.__AddonRef = nLuaEventHandler
+  -- Determine Addon name ... somehow
+  -- Apollo.__AddonName =
+  nLuaEventHandler:OnLoad()
 end
 function Apollo.SuspendAddon(nId)
 end
@@ -83,20 +84,20 @@ end
 function Apollo.GetObjectize(pObject)
 end
 function Apollo.GetAddon(name)
-    if name == Apollo.__AddonName then
-        return Apollo.__AddonRef
-    end
+  if name == Apollo.__AddonName then
+    return Apollo.__AddonRef
+  end
 end
 function Apollo.GetObjectSize()
 end
 function Apollo.LoadForm(strFile, strForm, wndParent, tLuaEventHandler)
-    if strForm == "Subwindows.ConfigPushButton" or strForm == "Subwindows.ConfigCheckButton" then
-        local form = setmetatable({}, { __index = Button })
-        return form
-    else
-        local form = setmetatable({}, { __index = Window })
-        return form
-    end
+  if strForm == "Subwindows.ConfigPushButton" or strForm == "Subwindows.ConfigCheckButton" then
+    local form = setmetatable({}, { __index = Button })
+    return form
+  else
+    local form = setmetatable({}, { __index = Window })
+    return form
+  end
 end
 function Apollo.GetTextWidth()
 end
@@ -125,17 +126,17 @@ end
 function Apollo.GetMinResolutionWidth()
 end
 Apollo.DragDropQueryResult = {
-    PassOn = 1,
-    Ignore = 2,
-    Accept = 3,
-    Invalid = 4
+  PassOn = 1,
+  Ignore = 2,
+  Accept = 3,
+  Invalid = 4
 }
 Apollo.DragDropCancelReason = {
-    EscapeKey = 1,
-    DroppedOnNothing = 2,
-    ClickedOnNothing = 3,
-    ClickedOnWorld = 4,
-    WindowMove = 5
+  EscapeKey = 1,
+  DroppedOnNothing = 2,
+  ClickedOnNothing = 3,
+  ClickedOnWorld = 4,
+  WindowMove = 5
 }
 function Apollo.RemoveEventHandler()
 end
@@ -158,27 +159,27 @@ end
 function Apollo.GetAPIVersion()
 end
 function Apollo.GetPackage(name)
-    return { tPackage = Apollo.__RegisteredPackages[name] }
+  return { __RegisteredPackages[name] }
 end
 function Apollo.GetStrata()
 end
 function Apollo.GetWindowsInStratum()
 end
 function Apollo.RegisterPackage(obj, name, version, dependencies)
-    if Apollo.__RegisteredPackages == nil then
-        Apollo.__RegisteredPackages = {}
-    end
-    Apollo.__RegisteredPackages[name] = obj
-    if obj.OnLoad ~= nil then
-        obj:OnLoad()
-    end
+  local OldPackage = __RegisteredPackages[name]
+  if (OldPackage.nVersion or 0) >= version then return end
+  __RegisteredPackages[name] = { tPackage = obj, nVersion = version, tDependencies = dependencies }
+
+  if obj.OnLoad ~= nil then
+    obj:OnLoad()
+  end
 end
 function Apollo.FormatNumber()
 end
 Apollo.AddonLoadStatus = {
-    Loading = 1,
-    Loaded = 2,
-    LoadingError = 3
+  Loading = 1,
+  Loaded = 2,
+  LoadingError = 3
 }
 
 return Apollo

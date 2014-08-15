@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local Money = { }
 Money.__index = Money
@@ -25,19 +25,21 @@ function Money:SetAmount(nNewAmount)
 end
 function Money:IsZero()
 end
-function Money.is()
+function Money.is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == Money or false
 end
 function Money.new()
-    local self = setmetatable({}, Money)
-    return self
+  local self = setmetatable({}, Money)
+  return self
 end
 Money.CodeEnumCurrencyType = {
-    Credits = 1,
-    Renown = 2,
-    ElderGems = 3,
-    CraftingVouchers = 4,
-    Prestige = 5,
-    GroupCurrency = 1
+  Credits = 1,
+  Renown = 2,
+  ElderGems = 3,
+  CraftingVouchers = 4,
+  Prestige = 5,
+  GroupCurrency = 1
 }
 function Money:GetAltType()
 end
@@ -48,8 +50,8 @@ end
 function Money:__eq()
 end
 Money.CodeEnumGroupCurrencyType = {
-    None = 1,
-    WarCoins = 2
+  None = 1,
+  WarCoins = 2
 }
 
 return Money

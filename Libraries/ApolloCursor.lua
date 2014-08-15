@@ -1,13 +1,15 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local ApolloCursor = { }
 ApolloCursor.__index = ApolloCursor
 
-function ApolloCursor.is()
+function ApolloCursor.is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == ApolloCursor or false
 end
 function ApolloCursor.new()
-    local self = setmetatable({}, ApolloCursor)
-    return self
+  local self = setmetatable({}, ApolloCursor)
+  return self
 end
 function ApolloCursor.GetCursor()
 end

@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local CColor = { }
 CColor.__index = CColor
@@ -8,10 +8,12 @@ end
 function CColor:Complement()
 end
 function CColor.new()
-    local self = setmetatable({}, CColor)
-    return self
+  local self = setmetatable({}, CColor)
+  return self
 end
-function CColor.is()
+function CColor.is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == CColor or false
 end
 function CColor:__unm()
 end

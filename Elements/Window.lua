@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local Window = { }
 
@@ -133,7 +133,7 @@ end
 function Window:GetOpacity()
 end
 function Window:GetAnchorOffsets()
-	return 0, 0, 0, 0
+  return 0, 0, 0, 0
 end
 function Window:SetAnchorOffsets(nLeft, nTop, nRight, nBottom)
 end
@@ -208,25 +208,27 @@ end
 function Window:SetSelfAnchor()
 end
 function Window:GetWidth()
-	return 0
+  return 0
 end
 function Window:GetHeight()
-	return 0
+  return 0
 end
 function Window:GetRect(nLeft, nTop, nRight, nBottom)
 end
 function Window:Move(nLeft, nTop, nWidth, nHeight)
 end
 function Window:FindChild(strName)
-	local form = setmetatable({}, { __index = Window })
-	return form
+  local form = setmetatable({}, { __index = Window })
+  return form
 end
-function Window.is()
+function Window.is(obj)
+  local objMT = getmetatable(obj)
+  return obj == Window or (objMT and objMT == Window) or false
 end
 Window.CodeEnumArrangeOrigin = {
-    LeftOrTop = 1,
-    Middle = 2,
-    RightOrBottom = 3
+  LeftOrTop = 1,
+  Middle = 2,
+  RightOrBottom = 3
 }
 function Window:FindChildByUserData()
 end

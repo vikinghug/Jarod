@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local Menu = { }
 Menu.__index = Menu
@@ -12,10 +12,12 @@ end
 function Menu:SetWindowTemplate()
 end
 function Menu.new()
-    local self = setmetatable({}, Menu)
-    return self
+  local self = setmetatable({}, Menu)
+  return self
 end
-function Menu.is()
+function Menu.is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == Menu or false
 end
 function Menu:__eq()
 end

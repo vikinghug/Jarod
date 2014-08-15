@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local Vector2 = { }
 Vector2.__index = Vector2
@@ -12,10 +12,12 @@ end
 function Vector2:NormalFast()
 end
 function Vector2.New()
-    local self = setmetatable({}, Vector2)
-    return self
+  local self = setmetatable({}, Vector2)
+  return self
 end
-function Vector2.Is()
+function Vector2.Is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == Vector2 or false
 end
 function Vector2.Dot()
 end

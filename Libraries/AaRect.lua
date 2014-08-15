@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local AaRect = { }
 AaRect.__index = AaRect
@@ -42,10 +42,12 @@ end
 function AaRect:SubtractRect()
 end
 function AaRect.New()
-    local self = setmetatable({}, AaRect)
-    return self
+  local self = setmetatable({}, AaRect)
+  return self
 end
-function AaRect.Is()
+function AaRect.Is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == AaRect or false
 end
 function AaRect.UnionPoint()
 end

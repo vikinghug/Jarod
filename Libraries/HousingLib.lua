@@ -127,16 +127,16 @@ end
 function HousingLib.GetDecorIconInfo()
 end
 HousingLib.CodeEnumDecorHookType = {
-    Roof = 1,
-    Entryway = 2,
-    Door = 3,
-    Wallpaper = 4,
-    FreePlace = 5,
-    DefaultHook = 6,
-    Crate = 7,
-    Landscape = 8,
-    WarplotFreePlace = 1,
-    Mannequin = 1
+  Roof = 1,
+  Entryway = 2,
+  Door = 3,
+  Wallpaper = 4,
+  FreePlace = 5,
+  DefaultHook = 6,
+  Crate = 7,
+  Landscape = 8,
+  WarplotFreePlace = 1,
+  Mannequin = 1
 }
 function HousingLib.JoinNeighborhood()
 end
@@ -231,22 +231,22 @@ end
 function HousingLib.GetPlacedDecorListWarplot()
 end
 HousingLib.HousingUpkeepType = {
-    Permanent = 1,
-    Timed = 2,
-    Charged = 3,
-    TimedCharged = 4,
-    Decay = 5,
-    StructurePoints = 6
+  Permanent = 1,
+  Timed = 2,
+  Charged = 3,
+  TimedCharged = 4,
+  Decay = 5,
+  StructurePoints = 6
 }
 HousingLib.NeighborPermissionLevel = {
-    Normal = 1,
-    Roommate = 2,
-    Account = 1
+  Normal = 1,
+  Roommate = 2,
+  Account = 1
 }
 HousingLib.ResidencePrivileges = {
-    None = 1,
-    Owner = 2,
-    Roommate = 3
+  None = 1,
+  Owner = 2,
+  Roommate = 3
 }
 function HousingLib.GetNumCratedDecor()
 end
@@ -319,39 +319,39 @@ end
 function HousingLib.GetMaxPlacedDecorExterior()
 end
 HousingLib.ResidencePrivacyLevel = {
-    Public = 1,
-    NeighborsOnly = 2,
-    RoommatesOnly = 3,
-    Private = 4
+  Public = 1,
+  NeighborsOnly = 2,
+  RoommatesOnly = 3,
+  Private = 4
 }
 HousingLib.DecorCategoryLimit = {
-    Mannequin = 1,
-    Light = 2
+  Mannequin = 1,
+  Light = 2
 }
 HousingLib.ResidenceCustomizationMode = {
-    Advanced = 1,
-    Simple = 2
+  Advanced = 1,
+  Simple = 2
 }
 HousingLib.HousingPlugFacing = {
-    North = 1,
-    South = 2,
-    East = 3,
-    West = 4,
-    Default = 5
+  North = 1,
+  South = 2,
+  East = 3,
+  West = 4,
+  Default = 5
 }
 HousingLib.RemodelOptionTypeInterior = {
-    Wallpaper = 1,
-    Floor = 2,
-    Ceiling = 3,
-    Trim = 4,
-    Lighting = 5
+  Wallpaper = 1,
+  Floor = 2,
+  Ceiling = 3,
+  Trim = 4,
+  Lighting = 5
 }
 HousingLib.RemodelOptionTypeExterior = {
-    Roof = 1,
-    Wallpaper = 2,
-    Entry = 3,
-    Door = 4,
-    Sky = 5
+  Roof = 1,
+  Wallpaper = 2,
+  Entry = 3,
+  Door = 4,
+  Sky = 5
 }
 
 return HousingLib

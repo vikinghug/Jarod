@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local XmlDoc = { }
 XmlDoc.__index = XmlDoc
@@ -23,11 +23,13 @@ function XmlDoc:ToTable()
 end
 function XmlDoc:ToTableGeneric()
 end
-function XmlDoc.is()
+function XmlDoc.is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == XmlDoc or false
 end
 function XmlDoc.new()
-    local self = setmetatable({}, XmlDoc)
-    return self
+  local self = setmetatable({}, XmlDoc)
+  return self
 end
 function XmlDoc.CreateFromTable()
 end

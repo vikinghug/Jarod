@@ -146,12 +146,12 @@ end
 function ZoneMapWindow:CreateOverlayType()
 end
 ZoneMapWindow.CodeEnumDisplayMode = {
-    SuperPanning = 1,
-    Panning = 2,
-    Scaled = 3,
-    Continent = 4,
-    World = 5,
-    SolarSystem = 6
+  SuperPanning = 1,
+  Panning = 2,
+  Scaled = 3,
+  Continent = 4,
+  World = 5,
+  SolarSystem = 6
 }
 function ZoneMapWindow:GetContinentZoneInfo()
 end

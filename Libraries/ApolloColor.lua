@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local ApolloColor = { }
 ApolloColor.__index = ApolloColor
@@ -10,10 +10,12 @@ end
 function ApolloColor:IsLinked()
 end
 function ApolloColor.new()
-    local self = setmetatable({}, ApolloColor)
-    return self
+  local self = setmetatable({}, ApolloColor)
+  return self
 end
-function ApolloColor.is()
+function ApolloColor.is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == ApolloColor or false
 end
 function ApolloColor.SetColor()
 end

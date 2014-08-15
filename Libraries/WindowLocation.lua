@@ -14,8 +14,8 @@ end
 function WindowLocation.ReadLocation()
 end
 function WindowLocation.new()
-    local self = setmetatable({}, WindowLocation)
-    return self
+  local self = setmetatable({}, WindowLocation)
+  return self
 end
 function WindowLocation:SetPoints()
 end

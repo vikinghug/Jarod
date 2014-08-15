@@ -1,4 +1,4 @@
-local setmetatable = setmetatable
+local getmetatable, setmetatable = getmetatable, setmetatable
 
 local Quaternion = { }
 Quaternion.__index = Quaternion
@@ -14,10 +14,12 @@ end
 function Quaternion:Conjugate()
 end
 function Quaternion.New()
-    local self = setmetatable({}, Quaternion)
-    return self
+  local self = setmetatable({}, Quaternion)
+  return self
 end
-function Quaternion.Is()
+function Quaternion.Is(obj)
+  local objMT = getmetatable(obj)
+  return objMT and objMT == Quaternion or false
 end
 function Quaternion.RotationXYZ()
 end
