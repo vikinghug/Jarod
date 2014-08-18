@@ -9,6 +9,7 @@ end
 function QuestLib.GetCount()
 end
 function QuestLib.GetMaxCount()
+  return 40
 end
 function QuestLib.GetQuest()
   return nil
