@@ -17,7 +17,7 @@ describe('ApolloPackage Functionality Testing', function()
     assert.are.equal(PackageOne, retPkg)
   end)
 
-  it ('only accepts the highst minor version', function()
+  it ('only accepts the highest minor version', function()
     Apollo.RegisterPackage(PackageTwo, MAJOR, MINOR_TWO, {})
     local retAPkg = Apollo.GetPackage(MAJOR)
     local retPkg = retAPkg and retAPkg.tPackage or nil
