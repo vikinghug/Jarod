@@ -11,6 +11,7 @@ end
 function QuestLib.GetMaxCount()
 end
 function QuestLib.GetQuest()
+  return nil
 end
 function QuestLib.GetKnownCategories()
 end
