@@ -5,7 +5,7 @@ CColor.__index = CColor
 
 function CColor:Saturate()
 end
-function CColor:Complement()
+function CColor.Complement()
 end
 function CColor.new()
   local self = setmetatable({}, CColor)
