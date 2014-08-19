@@ -46,4 +46,8 @@ end
 function GalacticArchiveArticle:__gc()
 end
 
+GalacticArchiveArticle.LinkQueryType_All = 0
+GalacticArchiveArticle.LinkQueryType_Parents = 1
+GalacticArchiveArticle.LinkQueryType_Children = 2
+
 return GalacticArchiveArticle
