@@ -20,4 +20,14 @@ end
 function DialogSys.IsItemQuestGiver()
 end
 
+DialogSys.DialogState_Inactive = 0
+DialogSys.DialogState_TopicChoice = 1
+DialogSys.DialogState_QuestAccept = 2
+DialogSys.DialogState_QuestComplete = 3
+DialogSys.DialogState_QuestIncomplete = 4
+DialogSys.DialogState_Vending = 5
+DialogSys.DialogState_Training = 6
+DialogSys.DialogState_TradeskillTraining = 7
+DialogSys.DialogState_CraftingStation = 8
+
 return DialogSys
