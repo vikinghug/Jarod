@@ -5,10 +5,10 @@ end
 function CustomerSurveyLib.GetPendingCount()
 end
 CustomerSurveyLib.CodeEnumSurveyType = {
-  General = 1,
-  Quest = 2,
-  PathMission = 3,
-  Challenge = 4
+  General = 0,
+  Quest = 1,
+  PathMission = 2,
+  Challenge = 3
 }
 
 return CustomerSurveyLib
