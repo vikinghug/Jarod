@@ -126,17 +126,17 @@ end
 function Apollo.GetMinResolutionWidth()
 end
 Apollo.DragDropQueryResult = {
-  PassOn = 1,
-  Ignore = 2,
-  Accept = 3,
-  Invalid = 4
+  PassOn = 0,
+  Ignore = 1,
+  Accept = 2,
+  Invalid = 3
 }
 Apollo.DragDropCancelReason = {
-  EscapeKey = 1,
-  DroppedOnNothing = 2,
-  ClickedOnNothing = 3,
-  ClickedOnWorld = 4,
-  WindowMove = 5
+  EscapeKey = 0,
+  DroppedOnNothing = 1,
+  ClickedOnNothing = 2,
+  ClickedOnWorld = 3,
+  WindowMove = 4
 }
 function Apollo.RemoveEventHandler()
 end
@@ -177,9 +177,9 @@ end
 function Apollo.FormatNumber()
 end
 Apollo.AddonLoadStatus = {
-  Loading = 1,
-  Loaded = 2,
-  LoadingError = 3
+  LoadingError = -1,
+  Loading = 0,
+  Loaded = 1
 }
 
 return Apollo
