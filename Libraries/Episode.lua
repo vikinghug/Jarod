@@ -44,4 +44,9 @@ end
 function Episode:__eq()
 end
 
+Episode.EpisodeState_Unknown = 0
+Episode.EpisodeState_Mentioned = 1
+Episode.EpisodeState_Active = 2
+Episode.EpisodeState_Complete = 3
+
 return Episode
