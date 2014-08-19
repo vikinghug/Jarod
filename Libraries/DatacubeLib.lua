@@ -39,4 +39,8 @@ end
 function DatacubeLib.GetTotalTalesForZone()
 end
 
+DatacubeLib.DatacubeType_Datacube = 0
+DatacubeLib.DatacubeType_Chronicle = 1
+DatacubeLib.DatacubeType_Journal = 2
+
 return DatacubeLib
