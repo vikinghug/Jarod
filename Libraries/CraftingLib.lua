@@ -75,29 +75,29 @@ end
 function CraftingLib.GetTierForAchievementCategory()
 end
 CraftingLib.CodeEnumTradeskill = {
-  Weaponsmith = 1,
+  Architect = 17,
+  Armorer = 12,
+  Augmentor = 16,
   Cooking = 2,
-  Armorer = 3,
-  Mining = 4,
-  Outfitter = 5,
-  Survivalist = 6,
-  Augmentor = 7,
-  Architect = 8,
-  Relic_Hunter = 9,
-  Fishing = 10,
-  Farmer = 11,
-  Tailor = 12,
-  Runecrafting = 1
+  Farmer = 20,
+  Fishing = 19,
+  Mining = 13,
+  Outfitter = 14,
+  Relic_Hunter = 18,
+  Runecrafting = 22,
+  Survivalist = 15,
+  Tailor = 21,
+  Weaponsmith = 1
 }
 CraftingLib.CodeEnumTradeskillTier = {
+  Zero = 0,
   Novice = 1,
   Apprentice = 2,
   Journeyman = 3,
-  Expert = 4,
-  Artisan = 5,
-  Zero = 1,
-  Master = 2,
-  GrandMaster = 3
+  Artisan = 4,
+  Expert = 5,
+  Master = 6,
+  GrandMaster = 7
 }
 function CraftingLib.GetSchematicCraftableCount()
 end
@@ -152,35 +152,35 @@ end
 function CraftingLib.GetEngravingInfo()
 end
 CraftingLib.CodeEnumCraftingDiscoveryHotCold = {
-  Cold = 1,
-  Warm = 2,
-  Hot = 3,
-  Success = 4
+  Cold = 0,
+  Warm = 1,
+  Hot = 2,
+  Success = 3
 }
 CraftingLib.CodeEnumTradeskillResult = {
-  Success = 1,
-  InsufficentFund = 2,
-  InvalidItem = 3,
-  InvalidSlot = 4,
-  MissingEngravingStation = 5,
-  Unlocked = 6,
-  UnknownError = 7,
-  GlyphExists = 8,
-  MissingGlyph = 9,
-  DuplicateGlyph = 10,
-  AttemptFailed = 11,
-  GlyphSlotLimit = 12
+  Success = 0,
+  InsufficentFund = 1,
+  InvalidItem = 2,
+  InvalidSlot = 3,
+  MissingEngravingStation = 4,
+  Unlocked = 5,
+  UnknownError = 6,
+  GlyphExists = 7,
+  MissingGlyph = 8,
+  DuplicateGlyph = 9,
+  AttemptFailed = 10,
+  GlyphSlotLimit = 11
 }
 CraftingLib.CodeEnumCraftingDirection = {
-  None = 1,
-  N = 2,
-  NE = 3,
-  E = 4,
-  SE = 5,
-  S = 6,
-  SW = 7,
-  W = 8,
-  NW = 9
+  None = 0,
+  N = 1,
+  NE = 2,
+  E = 3,
+  SE = 4,
+  S = 5,
+  SW = 6,
+  W = 7,
+  NW = 8
 }
 
 return CraftingLib
