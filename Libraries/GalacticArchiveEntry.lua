@@ -34,4 +34,12 @@ end
 function GalacticArchiveEntry:__gc()
 end
 
+GalacticArchiveEntry.ArchiveEntryEnum_Text = 0
+GalacticArchiveEntry.ArchiveEntryEnum_TextAboveArt = 1
+GalacticArchiveEntry.ArchiveEntryEnum_TextBelowArt = 2
+GalacticArchiveEntry.ArchiveEntryEnum_EldanArchive = 3
+GalacticArchiveEntry.ArchiveEntryHeaderEnum_Text = 0
+GalacticArchiveEntry.ArchiveEntryHeaderEnum_TextWithPortrait = 1
+GalacticArchiveEntry.ArchiveEntryHeaderEnum_TextWithIcon = 2
+
 return GalacticArchiveEntry
