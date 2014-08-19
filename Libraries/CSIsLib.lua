@@ -14,15 +14,13 @@ function CSIsLib.SelectCSIOption()
 end
 function CSIsLib.GetTimeRemainingForActiveCSI()
 end
-CSIsLib.ClientSideInteractionType = {
-  PressAndHold = 1,
-  RapidTapping = 2,
-  RapidTappingInverse = 3,
-  PrecisionTapping = 4,
-  Metronome = 5,
-  YesNo = 6,
-  Memory = 7,
-  Keypad = 8
-}
+CSIsLib.ClientSideInteractionType_PressAndHold = 0
+CSIsLib.ClientSideInteractionType_RapidTapping = 1
+CSIsLib.ClientSideInteractionType_PrecisionTapping = 2
+CSIsLib.ClientSideInteractionType_Metronome = 3
+CSIsLib.ClientSideInteractionType_YesNo = 4
+CSIsLib.ClientSideInteractionType_Memory = 5
+CSIsLib.ClientSideInteractionType_Keypad = 6
+CSIsLib.ClientSideInteractionType_RapidTappingInverse = 7
 
 return CSIsLib
