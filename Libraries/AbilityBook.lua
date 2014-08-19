@@ -51,23 +51,23 @@ end
 function AbilityBook.GetEldanAugmentationRespecCost()
 end
 AbilityBook.CodeEnumSpecConstant = {
-  MaxNumSpecs = 1
+  MaxNumSpecs = 4
 }
 AbilityBook.CodeEnumSpecError = {
-  Ok = 1,
-  InvalidIndex = 2,
-  NoChange = 3,
-  InCombat = 4,
-  InvalidPlayer = 5,
-  IndexLocked = 6,
-  PvPRestricted = 7,
-  InVoid = 8
+  Ok = 0,
+  InvalidIndex = 1,
+  NoChange = 2,
+  InCombat = 3,
+  InvalidPlayer = 4,
+  IndexLocked = 5,
+  PvPRestricted = 6,
+  InVoid = 7
 }
 AbilityBook.CodeEnumEldanAvailability = {
-  Unavailable = 1,
-  Inaccessible = 2,
-  Inactivated = 3,
-  Activated = 4
+  Unavailable = 0,
+  Inaccessible = 1,
+  Inactivated = 2,
+  Activated = 3
 }
 
 return AbilityBook
