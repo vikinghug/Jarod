@@ -34,11 +34,11 @@ end
 function ItemAuction:__gc()
 end
 ItemAuction.CodeEnumAuctionRemaining = {
-  Expiring = 1,
-  LessThanHour = 2,
-  Short = 3,
-  Long = 4,
-  Very_Long = 5
+  Expiring = 0,
+  LessThanHour = 1,
+  Short = 2,
+  Long = 3,
+  Very_Long = 4
 }
 
 return ItemAuction
