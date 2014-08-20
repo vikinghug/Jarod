@@ -37,53 +37,62 @@ end
 function MarketplaceLib.PostItemAuction()
 end
 MarketplaceLib.AuctionEventType = {
-  Post = 1,
-  Bid = 2,
-  Fill = 3,
-  Expire = 4,
-  Cancel = 5
+  Post = 0,
+  Bid = 1,
+  Fill = 2,
+  Expire = 3,
+  Cancel = 4
 }
 MarketplaceLib.AuctionPostResult = {
-  Ok = 1,
-  DbFailure = 2,
-  Item_BadId = 3,
-  NotReady = 4,
-  CannotFillOrder = 5,
-  TooManyOrders = 6,
-  OrderTooBig = 7,
-  NotFound = 8,
-  BidTooLow = 9,
-  OwnItem = 10,
-  BidTooHigh = 11,
-  AlreadyHasBid = 12,
-  NotEnoughToFillQuantity = 1,
-  NotEnoughCash = 2,
-  ItemAuctionDisabled = 3,
-  CommodityDisabled = 4
+  AlreadyHasBid = 100,
+  BidTooHigh = 99,
+  BidTooLow = 97,
+  CannotFillOrder = 90,
+  CommodityDisabled = 124,
+  DbFailure = 5,
+  Item_BadId = 6,
+  ItemAuctionDisabled = 123,
+  NotEnoughCash = 20,
+  NotEnoughToFillQuantity = 19,
+  NotFound = 96,
+  NotReady = 89,
+  Ok = 0,
+  OrderTooBig = 95,
+  OwnItem = 98,
+  TooManyOrders = 94
 }
 MarketplaceLib.AuctionSort = {
-  MinBid = 1,
-  Buyout = 2,
-  TimeLeft = 3,
-  Property0 = 2,
-  Property1 = 3,
-  Property2 = 4,
-  Property3 = 5,
-  Property4 = 6,
-  Property = 1
+  MinBid = 0,
+  Buyout = 1,
+  TimeLeft = 2,
+  Property = 3
 }
 function MarketplaceLib.GetItemAuctionCost()
 end
 function MarketplaceLib.GetItemProperties()
 end
 MarketplaceLib.ItemAuctionFilterData = {
-  ItemAuctionFilterPropertyMin = 1,
-  ItemAuctionFilterPropertyMax = 2,
-  ItemAuctionFilterLevel = 3,
-  ItemAuctionFilterQuality = 4,
-  ItemAuctionFilterGlyphSlot = 5,
-  ItemAuctionFilterBuyoutMax = 6,
-  ItemAuctionFilterEquippableBy = 7
+  ItemAuctionFilterPropertyMin = 0,
+  ItemAuctionFilterPropertyMax = 1,
+  ItemAuctionFilterLevel = 2,
+  ItemAuctionFilterQuality = 3,
+  ItemAuctionFilterGlyphSlot = 4,
+  ItemAuctionFilterBuyoutMax = 5,
+  ItemAuctionFilterEquippableBy = 6
 }
+
+MarketplaceLib.kAuctionSearchMaxFilters = 6
+MarketplaceLib.kAuctionSearchMaxIds = 10
+MarketplaceLib.kAuctionSearchMaxResults = 50
+MarketplaceLib.kAuctionSearchPageSize = 30
+MarketplaceLib.kCommodityAuctionRake = 12
+MarketplaceLib.kCommodityOrderListTimeDays = 7
+MarketplaceLib.kfCommodityBuyOrderTaxMultiplier = 0.019999999552965
+MarketplaceLib.kItemAuctionListTimeDays = 2
+MarketplaceLib.kItemAuctionRake = 12
+MarketplaceLib.kMaxCommodityOrder = 200
+MarketplaceLib.kMaxPlayerAuctions = 25
+MarketplaceLib.kMaxPlayerCommodityOrders = 25
+MarketplaceLib.knCommodityBuyOrderTaxMinimum = 500
 
 return MarketplaceLib
