@@ -41,5 +41,7 @@ function XmlDoc:IsLoaded()
 end
 function XmlDoc:__gc()
 end
+XmlDoc.Node = "__XmlNode"
+XmlDoc.Text = "__XmlText"
 
 return XmlDoc

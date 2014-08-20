@@ -167,5 +167,23 @@ function Quest:__eq()
 end
 function Quest:__gc()
 end
+Quest.kQuestInvalidChecklistIndex = -1
+Quest.kQuestInvalidObjectiveIdx = -1
+Quest.kQuestInvalidQuestId = 0
+Quest.kQuestMaxObjective = 6
+Quest.kQuestShareAcceptTimeoutMs = 10000
+Quest.Quest2RewardType_GrantTradeskill = 5
+Quest.Quest2RewardType_Item = 1
+Quest.Quest2RewardType_Money = 3
+Quest.Quest2RewardType_Reputation = 2
+Quest.Quest2RewardType_TradeSkillXp = 4
+Quest.QuestState_Abandoned = 6
+Quest.QuestState_Accepted = 1
+Quest.QuestState_Achieved = 2
+Quest.QuestState_Botched = 4
+Quest.QuestState_Completed = 3
+Quest.QuestState_Ignored = 7
+Quest.QuestState_Mentioned = 5
+Quest.QuestState_Unknown = 0
 
 return Quest

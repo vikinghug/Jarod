@@ -88,13 +88,13 @@ end
 function MatchingGame.DoesRequestWarplotInit()
 end
 MatchingGame.MatchType = {
-  Battleground = 1,
-  Dungeon = 2,
-  Adventure = 3,
-  Arena = 4,
-  Warplot = 5,
-  RatedBattleground = 6,
-  OpenArena = 7
+  Battleground = 0,
+  Dungeon = 1,
+  Adventure = 2,
+  Arena = 3,
+  Warplot = 4,
+  RatedBattleground = 5,
+  OpenArena = 6
 }
 MatchingGame.PVPGameState = {
   Preparation = 1,
@@ -102,35 +102,35 @@ MatchingGame.PVPGameState = {
   Finished = 3
 }
 MatchingGame.Team = {
-  Team1 = 1,
-  Team2 = 2
+  Team1 = 0,
+  Team2 = 1
 }
 MatchingGame.Winner = {
-  Team1 = 1,
-  Team2 = 2,
-  Draw = 3
+  Team1 = 0,
+  Team2 = 1,
+  Draw = 2
 }
 MatchingGame.MatchEndReason = {
-  Completed = 1,
-  Forfeit = 2,
-  TimeExpired = 3
+  Completed = 0,
+  Forfeit = 1,
+  TimeExpired = 2
 }
 MatchingGame.Rules = {
-  Default = 1,
-  DeathmatchPool = 2,
-  WaveRespawn = 3
+  Default = 0,
+  WaveRespawn = 1,
+  DeathmatchPool = 2
 }
 MatchingGame.Roles = {
-  Tank = 1,
-  Healer = 2,
-  DPS = 3
+  Tank = 0,
+  Healer = 1,
+  DPS = 2
 }
 MatchingGame.RatingType = {
-  Arena2v2 = 1,
-  Arena3v3 = 2,
-  Arena5v5 = 3,
-  RatedBattleground = 4,
-  Warplot = 1
+  Arena2v2 = 0,
+  Arena3v3 = 1,
+  Arena5v5 = 2,
+  RatedBattleground = 3,
+  Warplot = 4
 }
 function MatchingGame:GetMinLevel()
 end
@@ -155,10 +155,10 @@ end
 function MatchingGame.GetWarPlotBattleState()
 end
 MatchingGame.PvpDeathReason = {
-  KilledByPlayer = 1,
-  KilledByCreature = 2,
-  Falling = 3,
-  Drowning = 4
+  KilledByPlayer = 0,
+  KilledByCreature = 1,
+  Falling = 2,
+  Drowning = 3
 }
 
 return MatchingGame
