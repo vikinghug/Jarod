@@ -39,7 +39,7 @@ Money.CodeEnumCurrencyType = {
   ElderGems = 3,
   CraftingVouchers = 4,
   Prestige = 5,
-  GroupCurrency = 1
+  GroupCurrency = 6
 }
 function Money:GetAltType()
 end
@@ -50,8 +50,8 @@ end
 function Money:__eq()
 end
 Money.CodeEnumGroupCurrencyType = {
-  None = 1,
-  WarCoins = 2
+  None = 0,
+  WarCoins = 1
 }
 
 return Money
