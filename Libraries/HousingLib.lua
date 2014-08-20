@@ -132,11 +132,11 @@ HousingLib.CodeEnumDecorHookType = {
   Door = 3,
   Wallpaper = 4,
   FreePlace = 5,
-  DefaultHook = 6,
-  Crate = 7,
-  Landscape = 8,
-  WarplotFreePlace = 1,
-  Mannequin = 1
+  WarplotFreePlace = 6,
+  DefaultHook = 7,
+  Crate = 8,
+  Landscape = 9,
+  Mannequin = 10
 }
 function HousingLib.JoinNeighborhood()
 end
@@ -231,22 +231,22 @@ end
 function HousingLib.GetPlacedDecorListWarplot()
 end
 HousingLib.HousingUpkeepType = {
-  Permanent = 1,
-  Timed = 2,
-  Charged = 3,
-  TimedCharged = 4,
-  Decay = 5,
-  StructurePoints = 6
+  Permanent = 0,
+  Timed = 1,
+  Charged = 2,
+  TimedCharged = 3,
+  Decay = 4,
+  StructurePoints = 5
 }
 HousingLib.NeighborPermissionLevel = {
-  Normal = 1,
-  Roommate = 2,
-  Account = 1
+  Normal = 0,
+  Roommate = 1,
+  Account = 2
 }
 HousingLib.ResidencePrivileges = {
-  None = 1,
-  Owner = 2,
-  Roommate = 3
+  None = 0,
+  Owner = 1,
+  Roommate = 2
 }
 function HousingLib.GetNumCratedDecor()
 end
@@ -319,25 +319,25 @@ end
 function HousingLib.GetMaxPlacedDecorExterior()
 end
 HousingLib.ResidencePrivacyLevel = {
-  Public = 1,
-  NeighborsOnly = 2,
-  RoommatesOnly = 3,
-  Private = 4
+  Public = 0,
+  NeighborsOnly = 1,
+  RoommatesOnly = 2,
+  Private = 3
 }
 HousingLib.DecorCategoryLimit = {
   Mannequin = 1,
   Light = 2
 }
 HousingLib.ResidenceCustomizationMode = {
-  Advanced = 1,
-  Simple = 2
+  Advanced = 3,
+  Simple = 4
 }
 HousingLib.HousingPlugFacing = {
-  North = 1,
-  South = 2,
-  East = 3,
-  West = 4,
-  Default = 5
+  North = 0,
+  South = 1,
+  East = 2,
+  West = 3,
+  Default = 4
 }
 HousingLib.RemodelOptionTypeInterior = {
   Wallpaper = 1,
@@ -353,5 +353,55 @@ HousingLib.RemodelOptionTypeExterior = {
   Door = 4,
   Sky = 5
 }
+
+HousingLib.HousingResult_Decor_CannotAfford = 21
+HousingLib.HousingResult_Decor_CannotCreateDecor = 28
+HousingLib.HousingResult_Decor_CannotDeleteDecor = 30
+HousingLib.HousingResult_Decor_CannotModifyDecor = 29
+HousingLib.HousingResult_Decor_CannotOwnMore = 45
+HousingLib.HousingResult_Decor_CouldNotValidate = 24
+HousingLib.HousingResult_Decor_ExceedsDecorLimit = 22
+HousingLib.HousingResult_Decor_InvalidDecor = 31
+HousingLib.HousingResult_Decor_InvalidPosition = 20
+HousingLib.HousingResult_Decor_MustBeUnique = 42
+HousingLib.HousingResult_Decor_PrereqNotMet = 25
+HousingLib.HousingResult_Failed = 1
+HousingLib.HousingResult_Guild_NotMember = 18
+HousingLib.HousingResult_Guild_TransactionFailed = 17
+HousingLib.HousingResult_InvalidNeighborhood = 39
+HousingLib.HousingResult_InvalidPermissions = 14
+HousingLib.HousingResult_InvalidResidence = 38
+HousingLib.HousingResult_InvalidResidenceName = 47
+HousingLib.HousingResult_Mannequin_NotEmpty = 40
+HousingLib.HousingResult_MustHaveResidenceName = 48
+HousingLib.HousingResult_Neighbor_AlreadyNeighbors = 8
+HousingLib.HousingResult_Neighbor_Full = 11
+HousingLib.HousingResult_Neighbor_IgnoredByPlayer = 44
+HousingLib.HousingResult_Neighbor_InvalidNeighbor = 7
+HousingLib.HousingResult_Neighbor_InvitePending = 19
+HousingLib.HousingResult_Neighbor_NoPendingInvite = 9
+HousingLib.HousingResult_Neighbor_PlayerDoesntExist = 6
+HousingLib.HousingResult_Neighbor_PlayerIsIgnored = 43
+HousingLib.HousingResult_Neighbor_PlayerNotAHomeowner = 5
+HousingLib.HousingResult_Neighbor_PlayerNotFound = 3
+HousingLib.HousingResult_Neighbor_PlayerNotOnline = 4
+HousingLib.HousingResult_Neighbor_PlayerWrongFaction = 10
+HousingLib.HousingResult_Neighbor_RequestAccepted = 16
+HousingLib.HousingResult_Neighbor_RequestDeclined = 13
+HousingLib.HousingResult_Neighbor_RequestTimedOut = 12
+HousingLib.HousingResult_Neighbor_Success = 2
+HousingLib.HousingResult_Plug_CannotAfford = 34
+HousingLib.HousingResult_Plug_CannotRotate = 41
+HousingLib.HousingResult_Plug_InvalidPlug = 33
+HousingLib.HousingResult_Plug_ModifyFailed = 35
+HousingLib.HousingResult_Plug_MustBeUnique = 36
+HousingLib.HousingResult_Plug_NotActive = 37
+HousingLib.HousingResult_Plug_PrereqNotMet = 32
+HousingLib.HousingResult_Success = 0
+HousingLib.HousingResult_Visit_Failed = 23
+HousingLib.HousingResult_Visit_Ignored = 27
+HousingLib.HousingResult_Visit_InvalidWorld = 15
+HousingLib.HousingResult_Visit_Private = 26
+HousingLib.PropertyRenameCost = 100
 
 return HousingLib

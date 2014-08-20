@@ -31,4 +31,13 @@ end
 function MailSystemLib.DeleteMultipleMessages()
 end
 
+MailSystemLib.EmailType_Character = 0
+MailSystemLib.EmailType_Creature = 1
+MailSystemLib.EmailType_GMMail = 2
+MailSystemLib.EmailType_CommodityAuction = 4
+MailSystemLib.EmailType_ItemAuction = 5
+MailSystemLib.MailDeliverySpeed_Instant = 0
+MailSystemLib.MailDeliverySpeed_Hour = 1
+MailSystemLib.MailDeliverySpeed_Day = 2
+
 return MailSystemLib

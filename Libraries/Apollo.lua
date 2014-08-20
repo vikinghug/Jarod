@@ -8,6 +8,8 @@ local __RegisteredPackages = setmetatable({}, { __index = function(k,t) k[t] = {
 
 local Apollo = {
 }
+local minResolutionWidth = 1366
+local maxResolutionWidth = 8192
 
 function Apollo.StartTimer(strTimerName)
 end
@@ -100,6 +102,7 @@ function Apollo.LoadForm(strFile, strForm, wndParent, tLuaEventHandler)
   end
 end
 function Apollo.GetTextWidth()
+  return 0
 end
 function Apollo.GetMouse()
 end
@@ -117,13 +120,17 @@ function Apollo.GetAddonInfo()
 end
 function Apollo.AlertAppWindow()
 end
-function Apollo.SetMaxResolutionWidth()
+function Apollo.SetMaxResolutionWidth(iValue)
+  maxResolutionWidth = iValue
 end
 function Apollo.GetMaxResolutionWidth()
+  return maxResolutionWidth
 end
-function Apollo.SetMinResolutionWidth()
+function Apollo.SetMinResolutionWidth(iValue)
+  minResolutionWidth = iValue
 end
 function Apollo.GetMinResolutionWidth()
+  return minResolutionWidth
 end
 Apollo.DragDropQueryResult = {
   PassOn = 0,

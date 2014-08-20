@@ -70,38 +70,28 @@ GroupLib.CodeEnumLootThreshoold = {
   Inferior = 9
 }
 GroupLib.Result = {
-  Ok = 9,
-  PlayerNotFound = 2,
-  PlayerAlreadyGrouped = 10,
-  InviteExpired = 11,
-  RealmNotFound = 5,
-  AlreadyHasPendingInvite = 12,
-  InviteSuccessful = 13,
-  NoPermission = 14,
-  InviteOtherExpired = 15,
-  AlreadyInvitedYou = 16,
-  InvitorNoPermission = 17,
-  Sent = 1,
   Accepted = 2,
-  Declined = 3,
-  NoPermissions = 4,
-  Grouped = 5,
-  Pending = 6,
-  ExpiredInviter = 7,
-  ExpriedInvitee = 18,
+  Busy = 19,
+  Declined = 1,
+  ExpiredInvitee = 10,
+  ExpiredInviter = 8,
+  Full = 13,
+  Grouped = 6,
+  GroupNotFound = 17,
+  InvitedYou = 11,
   IsInvited = 9,
-  InvitedYou = 10,
-  Full = 11,
-  RoleFull = 1,
-  NoInvitingSelf = 2,
-  ExpiredInvitee = 1,
-  ServerControlled = 2,
-  GroupNotFound = 3,
-  NotAcceptingRequests = 4,
-  Busy = 5,
-  SentToLeader = 6,
-  LeaderOffline = 7,
-  WrongFaction = 8
+  LeaderOffline = 21,
+  NoInvitingSelf = 15,
+  NoPermissions = 3,
+  NotAcceptingRequests = 18,
+  Pending = 7,
+  PlayerNotFound = 5,
+  RealmNotFound = 12,
+  RoleFull = 14,
+  Sent = 0,
+  SentToLeader = 20,
+  ServerControlled = 16,
+  WrongFaction = 22
 }
 GroupLib.LeaveReason = {
   Leave = 1,
@@ -137,62 +127,59 @@ end
 function GroupLib.RequestQuest()
 end
 GroupLib.LootThreshold = {
-  Average = 1,
-  Good = 2,
-  Excellent = 3,
-  Superb = 4,
-  Exquisite = 2,
-  Phenomenal = 3,
-  Extraordinary = 4,
-  Legendary = 8,
-  Inferior = 9,
-  Artifact = 1
+  Inferior = 1,
+  Average = 2,
+  Good = 3,
+  Excellent = 4,
+  Superb = 5,
+  Legendary = 6,
+  Artifact = 7
 }
 GroupLib.LootRule = {
-  FreeForAll = 1,
-  RoundRobin = 2,
-  NeedBeforeGreed = 3,
-  Master = 4
+  FreeForAll = 0,
+  RoundRobin = 1,
+  NeedBeforeGreed = 2,
+  Master = 3
 }
 GroupLib.RemoveReason = {
-  Left = 1,
+  Disconnected = 1,
   Kicked = 2,
-  Disconnected = 3,
+  Left = 3,
   Disband = 4,
   RemovedByServer = 5,
   VoteKicked = 6
 }
 GroupLib.ActionResult = {
-  LeaveSuccess = 1,
-  LeaveFailed = 2,
-  DisbandSuccess = 3,
+  AlreadyInGroupInstance = 27,
+  ChangeSettingsFailed = 15,
+  ChangeSettingsSuccess = 14,
   DisbandFailed = 4,
-  KickSuccess = 5,
-  KickFailed = 6,
-  PromoteSuccess = 7,
-  PromoteFailed = 8,
-  FlagsSuccess = 9,
+  DisbandSuccess = 3,
   FlagsFailed = 10,
-  MemberFlagsSuccess = 11,
-  MemberFlagsFailed = 12,
-  NotInGroup = 13,
-  ChangeSettingsFailed = 14,
-  ChangeSettingsSuccess = 15,
-  MentoringInvalidMentor = 16,
-  MentoringInvalidMentee = 17,
+  FlagsSuccess = 9,
   InvalidGroup = 18,
-  MentoringSelf = 19,
-  ReadyCheckFailed = 20,
-  MentoringNotAllowed = 21,
-  MarkingNotPermitted = 22,
-  InvalidMarkIndex = 23,
+  InvalidMarkIndex = 22,
   InvalidMarkTarget = 24,
+  KickFailed = 6,
+  KickSuccess = 5,
+  LeaveFailed = 2,
+  LeaveSuccess = 1,
+  MarkingNotPermitted = 21,
+  MemberFlagsFailed = 12,
+  MemberFlagsSuccess = 11,
   MentoringInCombat = 25,
+  MentoringInvalidMentee = 17,
+  MentoringInvalidMentor = 16,
   MentoringLowestLevel = 26,
-  MentoringNoAction = 27,
-  OrderInvalidMember = 1,
-  OrderFailedLeader = 2,
-  AlreadyInGroupInstance = 3
+  MentoringNoAction = 29,
+  MentoringNotAllowed = 23,
+  MentoringSelf = 19,
+  NotInGroup = 13,
+  OrderFailedLeader = 31,
+  OrderInvalidMember = 30,
+  PromoteFailed = 8,
+  PromoteSuccess = 7,
+  ReadyCheckFailed = 20
 }
 GroupLib.GameMode = {
   Normal = 1,
@@ -201,9 +188,9 @@ GroupLib.GameMode = {
   Nightmare = 4
 }
 GroupLib.Difficulty = {
-  Normal = 1,
-  Veteran = 2,
-  Count = 1
+  Normal = 0,
+  Veteran = 1,
+  Count = 2
 }
 function GroupLib.AcceptMentoring()
 end
@@ -262,13 +249,13 @@ end
 function GroupLib.InInstanceWithMember()
 end
 GroupLib.HarvestLootRule = {
-  RoundRobin = 1,
-  FirstTagger = 2
+  RoundRobin = 0,
+  FirstTagger = 1
 }
 GroupLib.InvitationMethod = {
-  Open = 1,
-  Neutral = 2,
-  Closed = 3
+  Open = 0,
+  Neutral = 1,
+  Closed = 2
 }
 
 return GroupLib
