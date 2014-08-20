@@ -20,5 +20,15 @@ function CommunicatorLib.QueueNextCall()
 end
 function CommunicatorLib.GetPathMissionDelivered()
 end
+CommunicatorLib.CommunicatorBackground_Default = 0
+CommunicatorLib.CommunicatorBackground_Exiles = 1
+CommunicatorLib.CommunicatorBackground_Dominion = 2
+CommunicatorLib.CommunicatorBackground_Drusera = 3
+CommunicatorLib.CommunicatorBackground_TheEntity = 4
+CommunicatorLib.CommunicatorOverlay_Default = 0
+CommunicatorLib.CommunicatorOverlay_LightStatic = 1
+CommunicatorLib.CommunicatorOverlay_HeavyStatic = 2
+CommunicatorLib.CommunicatorPortraitPlacement_Left = 0
+CommunicatorLib.CommunicatorPortraitPlacement_Right = 1
 
 return CommunicatorLib
