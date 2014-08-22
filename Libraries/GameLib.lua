@@ -162,8 +162,6 @@ GameLib.CodeEnumMissType = {
 }
 function GameLib.GetWorldDifficulty()
 end
-function GameLib.GetWorldGameMode()
-end
 function GameLib.Disembark()
 end
 function GameLib.GetPlayerGenericVehicleUnit()
@@ -215,6 +213,38 @@ end
 function GameLib.GetReputationInfo()
 end
 function GameLib.GetReputationLevels()
+  return {
+    {
+      nMax = 2000,
+      nMin = 0,
+      strName = "Neutral"
+    },
+    {
+      nMax = 4000,
+      nMin = 2000,
+      strName = "Liked"
+    },
+    {
+      nMax = 8000,
+      nMin = 4000,
+      strName = "Accepted"
+    },
+    {
+      nMax = 16000,
+      nMin = 8000,
+      strName = "Popular"
+    },
+    {
+      nMax = 32000,
+      nMin = 16000,
+      strName = "Esteemed"
+    },
+    {
+      nMax = 32000,
+      nMin = 32000,
+      strName = "Beloved"
+    }
+  }
 end
 function GameLib.GetAbilityPoints()
 end

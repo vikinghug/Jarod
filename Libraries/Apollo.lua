@@ -164,6 +164,7 @@ end
 function Apollo.IsWindowSubclassRegistered()
 end
 function Apollo.GetAPIVersion()
+  return 9
 end
 function Apollo.GetPackage(name)
   return __RegisteredPackages[name]

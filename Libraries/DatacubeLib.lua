@@ -2,8 +2,6 @@ local DatacubeLib = { }
 
 function DatacubeLib.IsDatacubeComplete()
 end
-function DatacubeLib.GetDatacubes()
-end
 function DatacubeLib.GetVolumes()
 end
 function DatacubeLib.GetLastUpdatedDatacube()

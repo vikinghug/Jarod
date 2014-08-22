@@ -17,14 +17,19 @@ end
 function MailSystemLib.RejectCOD(pEmail)
 end
 function MailSystemLib.GetMessageCharacterLimit()
+  return 499
 end
 function MailSystemLib.GetSubjectCharacterLimit()
+  return 49
 end
 function MailSystemLib.GetNameCharacterLimit()
+  return 32
 end
 function MailSystemLib.GetRealmCharacterLimit()
+  return 50
 end
 function MailSystemLib.GetAttachmentMaxCount()
+  return 10
 end
 function MailSystemLib.GetSendCost()
 end

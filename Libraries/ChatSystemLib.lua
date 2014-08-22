@@ -2,8 +2,6 @@ local ChatSystemLib = { }
 
 function ChatSystemLib.SendOnChannel(nChannelNumber, strText)
 end
-function ChatSystemLib.GetInputTypeForString(strText)
-end
 function ChatSystemLib.JoinChannel()
 end
 function ChatSystemLib.LeaveChannel()

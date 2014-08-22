@@ -2,17 +2,7 @@ local CREDDExchangeLib = { }
 
 function CREDDExchangeLib.RequestExchangeInfo()
 end
-function CREDDExchangeLib.SellCREDD()
-end
-function CREDDExchangeLib.SellCREDD2()
-end
-function CREDDExchangeLib.BuyCREDD()
-end
-function CREDDExchangeLib.BuyCREDD2()
-end
 function CREDDExchangeLib.CancelOrder()
-end
-function CREDDExchangeLib.CancelOrder2()
 end
 function CREDDExchangeLib.GetCREDDHistory()
 end
