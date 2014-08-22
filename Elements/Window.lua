@@ -225,11 +225,6 @@ function Window.is(obj)
   local objMT = getmetatable(obj)
   return obj == Window or (objMT and objMT == Window) or false
 end
-Window.CodeEnumArrangeOrigin = {
-  LeftOrTop = 1,
-  Middle = 2,
-  RightOrBottom = 3
-}
 function Window:FindChildByUserData()
 end
 function Window:GetChildren()
@@ -304,5 +299,19 @@ function Window:__gc()
 end
 function Window:__eq()
 end
+
+Window.Anchor_Left = 0
+Window.Anchor_Top = 1
+Window.Anchor_Right = 2
+Window.Anchor_Bottom = 3
+Window.CodeEnumArrangeOrigin = {
+    LeftOrTop = 0,
+    Middle = 1,
+    RightOrBottom = 2
+}
+Window.TPT_OnCursor = 0
+Window.TPT_NavText = 1
+Window.TPT_UserDraw = 2
+Window.TPT_DynamicFloater = 3
 
 return Window
