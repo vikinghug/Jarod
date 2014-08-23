@@ -15,15 +15,13 @@ function ApolloColor.new()
 end
 function ApolloColor.is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == ApolloColor or false
+  return objMT == ApolloColor
 end
 function ApolloColor.SetColor()
 end
 function ApolloColor:__eq()
 end
 function ApolloColor:__gc()
-end
-function ApolloColor:__index()
 end
 
 return ApolloColor

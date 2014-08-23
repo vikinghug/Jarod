@@ -25,7 +25,7 @@ function XmlDoc:ToTableGeneric()
 end
 function XmlDoc.is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == XmlDoc or false
+  return objMT == XmlDoc
 end
 function XmlDoc.new()
   local self = setmetatable({}, XmlDoc)

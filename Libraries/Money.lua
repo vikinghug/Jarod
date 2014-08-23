@@ -27,7 +27,7 @@ function Money:IsZero()
 end
 function Money.is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == Money or false
+  return objMT == Money
 end
 function Money.new()
   local self = setmetatable({}, Money)

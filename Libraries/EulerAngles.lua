@@ -11,17 +11,13 @@ function EulerAngles.New()
 end
 function EulerAngles.Is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == EulerAngles or false
+  return objMT == EulerAngles
 end
 function EulerAngles.FromQuaternion()
 end
 function EulerAngles.Identity()
 end
-function EulerAngles:__newindex()
-end
 function EulerAngles:__tostring()
-end
-function EulerAngles:__index()
 end
 
 return EulerAngles

@@ -13,7 +13,7 @@ function CColor.new()
 end
 function CColor.is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == CColor or false
+  return objMT == CColor
 end
 function CColor:__unm()
 end
@@ -28,10 +28,6 @@ end
 function CColor:__mul()
 end
 function CColor:__sub()
-end
-function CColor:__index()
-end
-function CColor:__newindex()
 end
 
 return CColor

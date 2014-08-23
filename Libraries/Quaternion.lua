@@ -19,7 +19,7 @@ function Quaternion.New()
 end
 function Quaternion.Is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == Quaternion or false
+  return objMT == Quaternion
 end
 function Quaternion.RotationXYZ()
 end
@@ -58,10 +58,6 @@ end
 function Quaternion:__div()
 end
 function Quaternion:__sub()
-end
-function Quaternion:__index()
-end
-function Quaternion:__newindex()
 end
 
 return Quaternion

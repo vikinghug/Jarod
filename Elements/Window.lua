@@ -223,7 +223,7 @@ function Window:FindChild(strName)
 end
 function Window.is(obj)
   local objMT = getmetatable(obj)
-  return obj == Window or (objMT and objMT == Window) or false
+  return objMT == Window
 end
 function Window:FindChildByUserData()
 end

@@ -17,7 +17,7 @@ function Menu.new()
 end
 function Menu.is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == Menu or false
+  return objMT == Menu
 end
 function Menu:__eq()
 end

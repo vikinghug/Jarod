@@ -17,7 +17,7 @@ function Vector3.New()
 end
 function Vector3.Is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == Vector3 or false
+  return objMT == Vector3
 end
 function Vector3.Dot()
 end
@@ -60,10 +60,6 @@ end
 function Vector3:__mul()
 end
 function Vector3:__sub()
-end
-function Vector3:__index()
-end
-function Vector3:__newindex()
 end
 
 return Vector3

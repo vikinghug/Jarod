@@ -5,7 +5,7 @@ ApolloCursor.__index = ApolloCursor
 
 function ApolloCursor.is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == ApolloCursor or false
+  return objMT == ApolloCursor
 end
 function ApolloCursor.new()
   local self = setmetatable({}, ApolloCursor)

@@ -47,7 +47,7 @@ function AaRect.New()
 end
 function AaRect.Is(obj)
   local objMT = getmetatable(obj)
-  return objMT and objMT == AaRect or false
+  return objMT == AaRect
 end
 function AaRect.UnionPoint()
 end
@@ -68,10 +68,6 @@ end
 function AaRect:__div()
 end
 function AaRect:__mul()
-end
-function AaRect:__index()
-end
-function AaRect:__newindex()
 end
 function AaRect:__add()
 end
