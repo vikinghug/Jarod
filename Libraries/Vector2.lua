@@ -11,10 +11,10 @@ function Vector2:LengthSq()
 end
 function Vector2:Normal()
   local length = self:Length()
-  if length > 0 then
-    self.x = self.x / length
-    self.y = self.y / length
+  if length <= 0 then
+    length = 1
   end
+  return Vector2.New(self.x / length, self.y / length)
 end
 function Vector2:NormalFast()
 end
@@ -35,15 +35,17 @@ end
 function Vector2.Dot(v1, v2)
   return (v1.x * v2.x) + (v1.y * v2.y)
 end
-function Vector2.CCW()
+function Vector2.CCW(v1, v2)
+  return Vector2.New(v1.x * v2.y - v1.y * v2.x)
 end
 function Vector2.Min(v1, v2)
-  return Vector.New({x = math.min(v1.x, v2.x), y = math.min(v1.y, v2.y)})
+  return Vector2.New(math.min(v1.x, v2.x), math.min(v1.y, v2.y))
 end
-function Vector2.Max()
-  return Vector.New({x = math.max(v1.x, v2.x), y = math.max(v1.y, v2.y)})
+function Vector2.Max(v1, v2)
+  return Vector2.New(math.max(v1.x, v2.x), math.max(v1.y, v2.y))
 end
-function Vector2.Modulate()
+function Vector2.Modulate(v1, v2)
+  return Vector2.New(v1.x * v2.x, v1.y * v2.y)
 end
 function Vector2.CloseEnough()
 end
